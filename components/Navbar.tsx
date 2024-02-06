@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { GITHUB_REPO, TWITTER } from "../utils/Consts";
+import { GITHUB_REPO, TWITTER, SITE } from "../utils/Consts";
 import { GitHubIcon, TwitterIcon } from "./Icons";
 
 const Container = styled.div`
   position: sticky;
   top: 0;
 
-  background: hsl(35, 31%, 88%, 80%);
+  background:	#2E2A23;
   backdrop-filter: blur(8px);
   z-index: 999;
   width: 100%;
@@ -82,7 +82,7 @@ const Navbar = () => {
   return (
     <Container>
       <InnerNav>
-        <Title>capybara</Title>
+        <Title>raccoon 🦝</Title>
         <StyledLinks>
           <li>
             <a href="#">home</a>
@@ -91,8 +91,8 @@ const Navbar = () => {
             <a href="#documentation">documentation</a>
           </li>
           <li>
-            <a href={TWITTER} target="_blank" rel="noreferrer">
-              twitter
+            <a href={SITE} target="_blank" rel="noreferrer">
+              owner
             </a>
           </li>
         </StyledLinks>

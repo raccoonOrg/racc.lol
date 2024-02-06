@@ -96,8 +96,10 @@ const Intro = styled.h1`
   max-width: 13ch;
   font-size: 3.85em; // big text = attention
   font-weight: 800;
+  color: #D8C2BA;
   line-height: 1.35;
   margin-top: 20px;
+
 
   @media (max-width: 550px) {
     font-size: 2em;
@@ -109,6 +111,7 @@ const SubHeader = styled.h2`
   font-weight: 700;
   line-height: 1.35;
   margin-bottom: 5px;
+  color: #CAD1C7;
   margin-left: 0 !important;
 `;
 
@@ -162,10 +165,10 @@ const CodeContainerBtn = styled.button`
   bottom: -18px;
   outline: none;
   border: unset;
-  color: var(--text-primary);
+  color: var(--text-secondary);
   padding: 8px;
   border-radius: 10px;
-  background: var(--bg-tertiary);
+  background: var(--bg-primary);
   opacity: 0.9;
   cursor: pointer;
   border: 2px solid rgb(0 0 0 / 12%);
@@ -310,15 +313,15 @@ const Home: NextPage = () => {
   return (
     <Wrapper>
       <Head>
-        <title>Home - capy.lol</title>
+        <title>the raccoons trashcan</title>
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="capy.lol" />
-        <meta property="og:title" content="Capybara API" />
+        <meta property="og:site_name" content="racc.lol" />
+        <meta property="og:title" content="THE Raccoon API" />
         <meta
           property="og:description"
-          content="The next generation of capybara APIs, access over 700+ images of capybaras in high definition."
+          content="the one and only raccoon api that will take over the world!"
         />
-        <meta name="twitter:creator" content="@devlooskie" />
+        <meta name="twitter:creator" content="@venqoii" />
 
         <link
           rel="apple-touch-icon"
@@ -347,26 +350,7 @@ const Home: NextPage = () => {
       <Polka />
       <Landing id="#">
         <div>
-          {/* the product hunt code we have on the api is broken and i dont feel like fixing it */}
-          {/*           <a
-            href="https://www.producthunt.com/posts/capybara-api?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-capybara&#0045;api"
-            target="_blank"
-            rel="noreferrer"
-            style={{ width: "fit-content", padding: 0, borderRadius: 11.125 }}
-          >
-            <ProductHunt>
-              <ProductHuntIcon />{" "}
-              <div>
-                <span>FIND US ON</span>Product Hunt
-              </div>
-              <div>
-                <UpIcon />
-                <Upvotes />
-              </div>
-            </ProductHunt>
-          </a> */}
-
-          <Intro>the next generation of capybara APIs.</Intro>
+          <Intro>the mother raccoon of all raccoon apis.</Intro>
           <BtnContainer>
             <a
               style={{ padding: "unset", borderRadius: 10 }}
@@ -390,8 +374,8 @@ const Home: NextPage = () => {
           <CodeContainer style={{ overflow: "unset" }}>
             <div style={{ overflow: "auto" }}>
               <pre>
-                {`~ curl 'https://api.capy.lol/v1/capybara?json=true' \\
-   -H 'authority: api.capy.lol' \\
+                {`~ curl 'https://api.racc.lol/v1/raccoon?json=true' \\
+   -H 'authority: api.racc.lol' \\
    -H 'accept: */*' \\
    -H 'accept-language: en-US,en;q=0.9' \\
    -H 'sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"' \\
@@ -409,8 +393,8 @@ const Home: NextPage = () => {
             <CopyToClipboard
               onCopy={() => toast("Copied", { type: "success" })}
               text={`
-            curl 'https://api.capy.lol/v1/capybara?json=true' \\
-   -H 'authority: api.capy.lol' \\
+            curl 'https://api.racc.lol/v1/raccoon?json=true' \\
+   -H 'authority: api.racc.lol' \\
    -H 'accept: */*' \\
    -H 'accept-language: en-US,en;q=0.9' \\
    -H 'sec-ch-ua: ".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"' \\
@@ -468,17 +452,17 @@ const Home: NextPage = () => {
       <DocumentationWrapper id="documentation">
         <Intro>documentation</Intro>
         <Request>
-          <SubHeader>GET v1/capybara</SubHeader>
-          <span>GET a random picture of a capybara.</span>
+          <SubHeader>GET v1/raccoon</SubHeader>
+          <span>GET a random picture of a raccoon.</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybara</code>
+              <code>{BASE_API_V1}/raccoon</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybara --output ./capy.jpg`}
+            text={`curl ${BASE_API_V1}/raccoon --output ./racc.jpg`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -487,28 +471,28 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybara?json=true</code>
+              <code>{BASE_API_V1}/raccoon?json=true</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybara?json=true`}
+            text={`curl ${BASE_API_V1}/raccoon?json=true`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
         </Request>
         <Request>
-          <SubHeader>GET v1/capybara/:index</SubHeader>
-          <span>GET a picture of a capybara.</span>
+          <SubHeader>GET v1/raccoon/:index</SubHeader>
+          <span>GET a picture of a raccoon.</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybara/100</code>
+              <code>{BASE_API_V1}/raccoon/100</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybara/100 --output ./capy100.jpg`}
+            text={`curl ${BASE_API_V1}/raccoon/100 --output ./racc100.jpg`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -517,28 +501,28 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybara/100?json=true</code>
+              <code>{BASE_API_V1}/raccoon/100?json=true</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybara/100?json=true`}
+            text={`curl ${BASE_API_V1}/raccoon/100?json=true`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
         </Request>
         <Request>
-          <SubHeader>GET v1/capybaras</SubHeader>
-          <span>GET a JSON list of capybaras (default 25 a request)</span>
+          <SubHeader>GET v1/raccoons</SubHeader>
+          <span>GET a JSON list of raccoons (default 25 a request)</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybaras</code>
+              <code>{BASE_API_V1}/raccoons</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybaras`}
+            text={`curl ${BASE_API_V1}/raccoons`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -547,12 +531,12 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybaras?random=true</code>
+              <code>{BASE_API_V1}/raccoons?random=true</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybaras?random=true`}
+            text={`curl ${BASE_API_V1}/raccoons?random=true`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -561,12 +545,12 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybaras?take=50</code>
+              <code>{BASE_API_V1}/raccoons?take=50</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybaras?take=50`}
+            text={`curl ${BASE_API_V1}/raccoons?take=50`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -575,12 +559,12 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybaras?from=50</code>
+              <code>{BASE_API_V1}/raccoons?from=50</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybaras?from=50`}
+            text={`curl ${BASE_API_V1}/raccoons?from=50`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -589,28 +573,28 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capybaras?from=50&take=10</code>
+              <code>{BASE_API_V1}/raccoons?from=50&take=10</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capybaras?from=50&take=10`}
+            text={`curl ${BASE_API_V1}/raccoons?from=50&take=10`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
         </Request>
         <Request>
-          <SubHeader>GET v1/capyoftheday</SubHeader>
-          <span>GET the capy of the day! (refreshes every 24hrs)</span>
+          <SubHeader>GET v1/raccoftheday</SubHeader>
+          <span>GET the racc of the day! (refreshes every 24hrs)</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capyoftheday</code>
+              <code>{BASE_API_V1}/raccoftheday</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capyoftheday --output ./capyoftheday.jpeg`}
+            text={`curl ${BASE_API_V1}/raccoftheday --output ./raccoftheday.jpeg`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -619,28 +603,28 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capyoftheday?json=true</code>
+              <code>{BASE_API_V1}/raccoftheday?json=true</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capyoftheday?json=true`}
+            text={`curl ${BASE_API_V1}/raccoftheday?json=true`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
         </Request>
         <Request>
-          <SubHeader>GET v1/capyhour</SubHeader>
-          <span>GET the capy of the hour! (refreshes every hour)</span>
+          <SubHeader>GET v1/racchour</SubHeader>
+          <span>GET the racc of the hour! (refreshes every hour)</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capyhour</code>
+              <code>{BASE_API_V1}/racchour</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capyhour --output ./capyhour.jpeg`}
+            text={`curl ${BASE_API_V1}/racchour --output ./racchour.jpeg`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -649,12 +633,12 @@ const Home: NextPage = () => {
           <CodeContainer>
             <pre>
               <span>GET </span>
-              <code>{BASE_API_V1}/capyhour?json=true</code>
+              <code>{BASE_API_V1}/racchour?json=true</code>
             </pre>
           </CodeContainer>
           <CopyToClipboard
             onCopy={() => toast("Copied", { type: "success" })}
-            text={`curl ${BASE_API_V1}/capyhour?json=true`}
+            text={`curl ${BASE_API_V1}/racchour?json=true`}
           >
             <TextBtn>Copy cURL</TextBtn>
           </CopyToClipboard>
@@ -662,16 +646,7 @@ const Home: NextPage = () => {
         <Request>
           <SubHeader>GET v1/fact</SubHeader>
           <span>
-            GET a fact about capybaras! (theres only a few for now... :(, but
-            you can{" "}
-            <a
-              href={GITHUB_API_REPO + "/blob/main/utils/facts.go"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              contribute!
-            </a>
-            )
+            GET a fact about raccoons!
           </span>
           <CodeContainer>
             <pre>
@@ -688,7 +663,7 @@ const Home: NextPage = () => {
         </Request>
         <Request>
           <SubHeader>GET v1/facts</SubHeader>
-          <span>GET many facts about capybaras!</span>
+          <span>GET many facts about raccoons!</span>
           <CodeContainer>
             <pre>
               <span>GET </span>
