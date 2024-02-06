@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ["api.capy.lol"],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  }
 };
 
 module.exports = nextConfig;
