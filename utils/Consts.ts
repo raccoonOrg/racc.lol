@@ -45,4 +45,10 @@ export const TESTIMONIALS: Testimonial[] = [
     pfp: "/img/Smellon.png",
     worksAt: "KeyAuth",
   },
+  {
+    message: `France #1`,
+    name: "Kyroware",
+    pfp: "/img/Kyro.png",
+    worksAt: "VACBAN.wtf",
+  },
 ];
