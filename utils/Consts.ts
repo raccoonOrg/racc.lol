@@ -28,7 +28,7 @@ export const TESTIMONIALS: Testimonial[] = [
     worksAt: "Polar",
   },
   {
-    message: `Anti France site I strongly advise to boycott`,
+    message: `amazing racoony experience`,
     name: "Brievement",
     pfp: "/img/Xpray.png",
     worksAt: "VACBAN.wtf",
