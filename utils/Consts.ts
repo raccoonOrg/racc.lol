@@ -52,4 +52,28 @@ export const TESTIMONIALS: Testimonial[] = [
     pfp: "/img/Kyro.png",
     worksAt: "VACBAN.wtf",
   },
+  {
+    message: `raccoons r cool ( gays are bad )`,
+    name: "Google",
+    pfp: "/img/Google.png",
+    worksAt: "VACBAN.wtf",
+  },
+  {
+    message: `raccoons 👍 gays 👎`,
+    name: "Deleteryy",
+    pfp: "/img/b.png",
+    worksAt: "VACBAN.wtf",
+  },
+  {
+    message: `I want to cuddle a raccoon and squish it (I love the gays and my bf)`,
+    name: "MIDGZXT",
+    pfp: "/img/MIDGZXT.png",
+    worksAt: "VACBAN.wtf",
+  },
+  {
+    message: `hello I love music and raccoons (I am the gay)`,
+    name: "Raucry",
+    pfp: "/img/Raucry.png",
+    worksAt: "VACBAN.wtf",
+  },
 ];
