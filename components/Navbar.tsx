@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GITHUB_REPO, TWITTER, SITE } from "../utils/Consts";
+import { GITHUB_REPO, TWITTER, SITE, RADIO} from "../utils/Consts";
 import { GitHubIcon, TwitterIcon } from "./Icons";
 
 const Container = styled.div`
@@ -93,6 +93,11 @@ const Navbar = () => {
           <li>
             <a href={SITE} target="_blank" rel="noreferrer">
               owner
+            </a>
+            </li>
+            <li>
+            <a href="/radio" rel="noreferrer">
+              radio
             </a>
           </li>
         </StyledLinks>
