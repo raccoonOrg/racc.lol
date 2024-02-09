@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from 'next/link';
 import { GITHUB_REPO, TWITTER, SITE, RADIO} from "../utils/Consts";
 import { GitHubIcon, TwitterIcon } from "./Icons";
 
@@ -96,9 +97,9 @@ const Navbar = () => {
             </a>
             </li>
             <li>
-            <a href="/radio" rel="noreferrer">
-              radio
-            </a>
+            <Link href="/radio">
+            <a>radio</a>
+            </Link>
           </li>
         </StyledLinks>
 
