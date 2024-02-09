@@ -9,7 +9,7 @@ export const BASE_API = "https://api.racc.lol";
 export const BASE_API_V1 = `${BASE_API}/v1`;
 
 export const GITHUB_REPO = "https://github.com/venqoi/raccoon-web";
-export const GITHUB_API_REPO = "https://github.com/venqoi/raccoon-api";
+export const GITHUB_API_REPO = "https://github.com/venqoi/racc-api";
 export const TWITTER = "https://twitter.com/venqoii";
 export const SITE = "https://venqoi.lol";
 
