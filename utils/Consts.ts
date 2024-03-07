@@ -55,7 +55,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     message: `raccoons r cool ( gays are bad )`,
     name: "Google",
-    pfp: "/img/Google.png",
+    pfp: "/img/google.png",
     worksAt: "VACBAN.wtf",
   },
   {
