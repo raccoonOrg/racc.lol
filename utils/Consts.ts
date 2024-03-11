@@ -76,4 +76,10 @@ export const TESTIMONIALS: Testimonial[] = [
     pfp: "/img/Raucry.png",
     worksAt: "VACBAN.wtf",
   },
+  {
+    message: `We love raccoons ❤️🦝`,
+    name: "Doublepablo",
+    pfp: "/img/Pablo.png",
+    worksAt: "VACBAN.wtf",
+  },
 ];
