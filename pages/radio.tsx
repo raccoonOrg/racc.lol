@@ -13,7 +13,25 @@ const VideoPlayer: React.FC = () => {
   };
 
   // Array of audio files
-  const audioFiles = ['uptownfunk.mp3', 'partyrock.mp3', 'heyya.mp3', 'shboom.mp3', 'afterparty.mp3', 'funkytown.mp3', 'wakemeup.mp3']; // Add more audio files as needed
+  const audioFiles = [
+    'getlucky.mp3',
+    'whatislove.mp3',
+    'heyya.mp3',
+    'partyrock.mp3',
+    'rasputin.mp3',
+    'shboom.mp3',
+    'uptownfunk.mp3',
+    'virtualinsanity.mp3',
+    'wakemeup.mp3',
+    'wiisports.mp3',
+    'afterparty.mp3',
+    'allmyfellas.mp3',
+    'summer.mp3',
+    'onemoretime.mp3',
+    'entersandman.mp3',
+    'feelgoodinc.mp3',
+    'funkytown.mp3'
+  ];
 
   // Function to get the current audio file
   const getCurrentAudioFile = () => {
