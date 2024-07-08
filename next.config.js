@@ -12,7 +12,7 @@ const nextConfig = {
     return [
       {
         source: '/invite',
-        destination: 'https://discord.com/oauth2/authorize?client_id=1212120152338866216&permissions=8&scope=applications.commands+bot',
+        destination: 'https://discord.com/oauth2/authorize?client_id=1212120152338866216&permissions=2048&integration_type=0&scope=bot',
         permanent: true,
       }
     ]
