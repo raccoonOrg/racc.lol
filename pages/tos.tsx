@@ -22,7 +22,9 @@ const ToS: NextPage = () => {
       <Head>
         <title>racc.lol - tos</title>
       </Head>
-      <TestText>very big tos blah blah <br></br>pretty much don't spam it and no ddossing. Use it however you'd like! </TestText>
+      <TestText>
+        very big tos blah blah <br></br>pretty much don&apos;t spam it and no ddossing. Use it however you&apos;d like!
+      </TestText>
     </Wrapper>
   );
 };
