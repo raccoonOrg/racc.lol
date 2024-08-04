@@ -566,6 +566,36 @@ const Home: NextPage = () => {
           </CopyToClipboard>
         </Request>
         <Request>
+          <SubHeader>GET v1/video</SubHeader>
+          <span>GET a random video of a raccoon(s).</span>
+          <CodeContainer>
+            <pre>
+              <span>GET </span>
+              <code>{BASE_API_V1}/video</code>
+            </pre>
+          </CodeContainer>
+          <CopyToClipboard
+            onCopy={() => toast("Copied", { type: "success" })}
+            text={`curl ${BASE_API_V1}/video --output ./racc.mp4`}
+          >
+            <TextBtn>Copy cURL</TextBtn>
+          </CopyToClipboard>
+          <br />
+          <span>For JSON format...</span>
+          <CodeContainer>
+            <pre>
+              <span>GET </span>
+              <code>{BASE_API_V1}/video?json=true</code>
+            </pre>
+          </CodeContainer>
+          <CopyToClipboard
+            onCopy={() => toast("Copied", { type: "success" })}
+            text={`curl ${BASE_API_V1}/video?json=true`}
+          >
+            <TextBtn>Copy cURL</TextBtn>
+          </CopyToClipboard>
+        </Request>
+        <Request>
           <SubHeader>GET v1/raccoftheday</SubHeader>
           <span>GET the racc of the day! (refreshes every 24hrs)</span>
           <CodeContainer>

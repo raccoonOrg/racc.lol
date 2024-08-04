@@ -82,4 +82,10 @@ export const TESTIMONIALS: Testimonial[] = [
     pfp: "/img/Pablo.png",
     worksAt: "VACBAN.wtf",
   },
+  {
+    message: `it good`,
+    name: "dapprrgort",
+    pfp: "/img/dapprrgort.png",
+    worksAt: "Raiden",
+  }
 ];
