@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const VideoPlayer: React.FC = () => {
   const [playRequested, setPlayRequested] = useState(false);
   const [audioIndex, setAudioIndex] = useState<number | null>(null);
   const [bonusFeature, setBonusFeature] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const konamiCode = [
     'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
@@ -34,7 +35,7 @@ const VideoPlayer: React.FC = () => {
     const newKeySequence = [...keySequence, event.key].slice(-konamiCode.length);
 
     if (newKeySequence.join('') === konamiCode.join('')) {
-      setBonusFeature(true); // Activate bonus feature
+      setBonusFeature(true);
     }
 
     setKeySequence(newKeySequence);
@@ -71,7 +72,10 @@ const VideoPlayer: React.FC = () => {
     'low.mp3',
     'september.mp3',
     'subwaysurfers.mp3',
-    'thriller.mp3'
+    'thriller.mp3',
+    'americanidiot.mp3',
+    'billiejean.mp3',
+    'jumpintheline.mp3',
   ];
 
   const getCurrentAudioFile = () => {
@@ -79,6 +83,11 @@ const VideoPlayer: React.FC = () => {
       return 'bonusfeature.mp3';
     }
     return audioFiles[audioIndex ?? 0];
+  };
+
+  const handleAudioEnd = () => {
+    setAudioIndex(getRandomAudioIndex());
+    audioRef.current?.play();
   };
 
   return (
@@ -91,9 +100,9 @@ const VideoPlayer: React.FC = () => {
         alignItems: 'center', 
         backgroundColor: '#000', 
         position: 'relative',
-        cursor: 'pointer' // Indicate clickable area
+        cursor: 'pointer'
       }}
-      onClick={handlePlayRequest} // Move the click handler here
+      onClick={handlePlayRequest}
       onDoubleClick={handleDoubleClick}
     >
       {!playRequested && (
@@ -109,7 +118,12 @@ const VideoPlayer: React.FC = () => {
             <source src="/raccoon.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <audio src={`/audio/${getCurrentAudioFile()}`} autoPlay loop />
+          <audio 
+            ref={audioRef} // Reference to the audio element
+            src={`/audio/${getCurrentAudioFile()}`} 
+            autoPlay 
+            onEnded={handleAudioEnd} // Trigger when the song ends
+          />
         </React.Fragment>
       )}
     </div>
