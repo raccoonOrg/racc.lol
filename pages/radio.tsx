@@ -32,8 +32,9 @@ const VideoPlayer: React.FC = () => {
 
   const handleKeyPress = (event: KeyboardEvent) => {
     const newKeySequence = [...keySequence, event.key].slice(-konamiCode.length);
+
     if (newKeySequence.join('') === konamiCode.join('')) {
-      setBonusFeature(true);
+      setBonusFeature(true); // Activate bonus feature
     }
 
     setKeySequence(newKeySequence);
@@ -89,13 +90,17 @@ const VideoPlayer: React.FC = () => {
         justifyContent: 'center', 
         alignItems: 'center', 
         backgroundColor: '#000', 
-        position: 'relative' 
+        position: 'relative',
+        cursor: 'pointer' // Indicate clickable area
       }}
+      onClick={handlePlayRequest} // Move the click handler here
       onDoubleClick={handleDoubleClick}
     >
       {!playRequested && (
-        <div style={{ position: 'absolute', zIndex: 1, cursor: 'pointer' }} onClick={handlePlayRequest}>
-          <h1 style={{ color: '#fff', fontSize: '24px' }}>Click to Play <br></br>(please note that some audios are VERY loud)</h1>
+        <div style={{ position: 'absolute', zIndex: 1 }}>
+          <h1 style={{ color: '#fff', fontSize: '24px' }}>
+            Click to Play <br></br>(please note that some audios are VERY loud)
+          </h1>
         </div>
       )}
       {playRequested && audioIndex !== null && (
