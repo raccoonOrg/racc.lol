@@ -85,7 +85,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     message: `it good`,
     name: "dapprrgort",
-    pfp: "/img/dapprrgort.png",
+    pfp: "/img/dapprrgort.jpg",
     worksAt: "Raiden",
   }
 ];
