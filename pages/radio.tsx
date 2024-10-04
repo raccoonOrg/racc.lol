@@ -1,18 +1,51 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const VideoPlayer: React.FC = () => {
   const [playRequested, setPlayRequested] = useState(false);
-  const [audioIndex, setAudioIndex] = useState(0);
+  const [audioIndex, setAudioIndex] = useState<number | null>(null);
+  const [bonusFeature, setBonusFeature] = useState(false);
+
+  const konamiCode = [
+    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+    'b', 'a', 'Enter'
+  ];
+  const [keySequence, setKeySequence] = useState<string[]>([]);
 
   const handlePlayRequest = () => {
     setPlayRequested(true);
   };
 
-  const handleDoubleClick = () => {
-    setAudioIndex(prevIndex => (prevIndex + 1) % audioFiles.length);
+  const getRandomAudioIndex = () => {
+    return Math.floor(Math.random() * audioFiles.length);
   };
 
-  // Array of audio files
+  useEffect(() => {
+    if (playRequested && audioIndex === null) {
+      setAudioIndex(getRandomAudioIndex());
+    }
+  }, [playRequested]);
+
+  const handleDoubleClick = () => {
+    setAudioIndex(getRandomAudioIndex());
+  };
+
+  const handleKeyPress = (event: KeyboardEvent) => {
+    const newKeySequence = [...keySequence, event.key].slice(-konamiCode.length);
+    if (newKeySequence.join('') === konamiCode.join('')) {
+      setBonusFeature(true);
+    }
+
+    setKeySequence(newKeySequence);
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [keySequence]);
+
   const audioFiles = [
     'getlucky.mp3',
     'whatislove.mp3',
@@ -30,12 +63,21 @@ const VideoPlayer: React.FC = () => {
     'onemoretime.mp3',
     'entersandman.mp3',
     'feelgoodinc.mp3',
-    'funkytown.mp3'
+    'funkytown.mp3',
+    'happytogether.mp3',
+    'saudianthem.mp3',
+    'hotlinebling.mp3',
+    'low.mp3',
+    'september.mp3',
+    'subwaysurfers.mp3',
+    'thriller.mp3'
   ];
 
-  // Function to get the current audio file
   const getCurrentAudioFile = () => {
-    return audioFiles[audioIndex];
+    if (bonusFeature) {
+      return 'bonusfeature.mp3';
+    }
+    return audioFiles[audioIndex ?? 0];
   };
 
   return (
@@ -53,10 +95,10 @@ const VideoPlayer: React.FC = () => {
     >
       {!playRequested && (
         <div style={{ position: 'absolute', zIndex: 1, cursor: 'pointer' }} onClick={handlePlayRequest}>
-          <h1 style={{ color: '#fff', fontSize: '24px' }}>Click to Play</h1>
+          <h1 style={{ color: '#fff', fontSize: '24px' }}>Click to Play <br></br>(please note that some audios are VERY loud)</h1>
         </div>
       )}
-      {playRequested && (
+      {playRequested && audioIndex !== null && (
         <React.Fragment>
           <video style={{ width: '100%', height: 'auto' }} autoPlay loop muted>
             <source src="/raccoon.mp4" type="video/mp4" />
