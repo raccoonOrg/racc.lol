@@ -87,5 +87,17 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "dapprrgort",
     pfp: "/img/capy.jpg",
     worksAt: "Raiden",
+  },
+  {
+    message: `Raccoons and cats are two of the most wonderful creations of nature `,
+    name: "Vixies1337",
+    pfp: "/img/Vixies.png",
+    worksAt: "VACBAN.wtf",
+  },
+  {
+    message: `⬆️+⬆️+⬇️+⬇️+⬅️+➡️+⬅️+➡️+🇧+🇦+Enter`,
+    name: "610ud",
+    pfp: "/img/Cloud.png",
+    worksAt: "VACBAN.wtf",
   }
 ];
