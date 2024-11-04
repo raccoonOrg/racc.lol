@@ -36,7 +36,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     message: `raccoon. 🦝`,
-    name: "Ripkova",
+    name: "Faint",
     pfp: "/img/Kova.png",
     worksAt: "KeyAuth",
   },
