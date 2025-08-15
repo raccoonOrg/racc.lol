@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Global scrollbar styles */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background rounded-lg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-lg border border-border/20;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-primary/70;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary) / 0.3) hsl(var(--background));
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Enhanced scrollbar for documentation cards */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted/10 rounded-lg;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/40 rounded-lg border border-border/30;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/60;
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: 30 15% 8%;
+  --foreground: 35 20% 85%;
+  --card: 30 15% 12%;
+  --card-foreground: 35 20% 85%;
+  --popover: 30 15% 12%;
+  --popover-foreground: 35 20% 85%;
+  --primary: 35 35% 70%;
+  --primary-foreground: 30 15% 8%;
+  --secondary: 30 15% 18%;
+  --secondary-foreground: 35 20% 85%;
+  --muted: 30 15% 18%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 35 35% 70%;
+  --accent-foreground: 30 15% 8%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 30 15% 20%;
+  --input: 30 15% 18%;
+  --ring: 35 35% 70%;
+}
