@@ -123,7 +123,7 @@ const endpoints: Endpoint[] = [
     response: {
       success: true,
       data: {
-        url: "https://api.racc.lol/raccoon",
+        url: "https://api.racc.lol/raccoon/42",
         size: 245760,
         contentType: "image/jpeg",
       },
@@ -204,7 +204,7 @@ const endpoints: Endpoint[] = [
     response: {
       success: true,
       data: {
-        url: "https://api.racc.lol/meme",
+        url: "https://api.racc.lol/meme/15",
         size: 156789,
         contentType: "image/jpeg",
       },
