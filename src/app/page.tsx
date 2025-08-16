@@ -200,7 +200,7 @@ export default function Home() {
                   asChild
                 >
                   <Link
-                    href="https://github.com/venqoi/racc.lol"
+                    href="https://github.com/raccoonOrg/racc.lol"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2"
@@ -248,7 +248,7 @@ export default function Home() {
                       className="w-full border-primary/40 hover:bg-primary/15 hover:border-primary/60 hover:shadow-md transition-all duration-300 rounded-xl bg-gradient-to-r from-transparent to-primary/5"
                     >
                       <Link
-                        href="https://github.com/venqoi/racc.lol"
+                        href="https://github.com/raccoonOrg/racc.lol"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center space-x-2"
