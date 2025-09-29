@@ -50,6 +50,14 @@ const reviews: Review[] = [
     avatar: "vmohammad.jpg",
   },
   {
+    name: "pringles",
+    role: "Owner",
+    company: "nest.rip",
+    rating: 5,
+    review: "peak api with cute raccoons",
+    avatar: "pringles.jpg",
+  },
+  {
     name: "bastih18",
     role: "Owner/CEO",
     company: "Pixelvault",
@@ -66,15 +74,6 @@ const reviews: Review[] = [
     review:
       "racc.lol is super great and so easy to use I love it it's perfect for all my projects for maximum trash panda cuteness",
     avatar: "keircn.png",
-  },
-  {
-    name: "Hello!",
-    role: "",
-    company: "",
-    rating: 5,
-    review:
-      "These are empty spaces that I need reviews for! If you use the api and want to leave a review, please add me on discord @venqoi or create a pull request on github.",
-    avatar: "https://api.racc.lol/v1/raccoon",
   },
   {
     name: "Hello!",
