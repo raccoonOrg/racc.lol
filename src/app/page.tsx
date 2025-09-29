@@ -51,7 +51,7 @@ const reviews: Review[] = [
   },
   {
     name: "pringles",
-    role: "Owner",
+    role: "Owner/CEO",
     company: "nest.rip",
     rating: 5,
     review: "peak api with cute raccoons",
