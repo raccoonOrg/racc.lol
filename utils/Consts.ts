@@ -72,5 +72,11 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "610ud",
     pfp: "/img/Cloud.png",
     worksAt: "VACBAN.wtf",
+  },
+  {
+    message: `a racoon a day keeps the depression away`,
+    name: "Aureal",
+    pfp: "/img/aureal.jpg",
+    worksAt: "Aureal.dev",
   }
 ];
