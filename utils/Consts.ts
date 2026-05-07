@@ -15,8 +15,8 @@ export const radio = "https://racc.lol/radio";
 export const TESTIMONIALS: Testimonial[] = [
   {
     message: `racc.lol is super great and so easy to use I love it it's perfect for all my projects for maximum trash panda cuteness`,
-    name: "Keircn",
-    pfp: "/img/Keircn.png",
+    name: "Key",
+    pfp: "/img/key.jpg",
     worksAt: "Priory IO",
   },
   {
