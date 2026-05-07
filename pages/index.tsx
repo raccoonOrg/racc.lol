@@ -14,8 +14,9 @@ import {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
+  overflow: hidden;
 `;
 
 
@@ -138,6 +139,7 @@ const Testimonials = styled.div`
   width: 100%;
   display: flex;
   gap: 50px;
+  overflow: hidden;
 
   padding: 5rem 0;
 `;
@@ -304,7 +306,7 @@ const Home: NextPage = () => {
       <Marquee
         speed={50}
         gradientWidth={100}
-        style={{ width: "100%" }}
+        style={{ width: "100%", overflow: "hidden" }}
       >
 <Testimonials>
            {TESTIMONIALS.map((testimonial, index) => (
